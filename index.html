@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 Secure Coding Review Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Secure Coding Review Demo</h1>
+    <p class="subtitle">Compare Insecure vs Secure Login Implementations</p>
+
+    <!-- 🔘 Mode Selection -->
+    <div class="button-group">
+      <button onclick="renderForm('insecure')">🚨 Insecure Version</button>
+      <button onclick="renderForm('secure')">✅ Secure Version</button>
+    </div>
+
+    <!-- Login Form Area -->
+    <div id="app" class="card">
+      <p>Select a version above to load the login form.</p>
+    </div>
+
+    <!-- ℹ️ Info Section (below login) -->
+    <div class="info-box">
+      <h3>Test Credentials</h3>
+      <p><strong>Username:</strong> admin</p>
+      <p><strong>Password:</strong> password123</p>
+      <p class="note">⚠️ Exposed here only for demo purposes.</p>
+    </div>
+
+    <div class="info-box">
+      <h3>About This Demo</h3>
+      <p>This page shows two types of login:</p>
+      <ul>
+        <li>🚨 <b>Insecure:</b> Password checked directly in code.</li>
+        <li>✅ <b>Secure:</b> Password is hashed before checking.</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>Key Learnings</h3>
+      <ul>
+        <li>❌ Don’t hardcode usernames/passwords.</li>
+        <li>❌ Don’t use plaintext checks.</li>
+        <li>✅ Use hashing (bcrypt, Argon2, etc.).</li>
+        <li>✅ Real apps should check passwords on the server.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
