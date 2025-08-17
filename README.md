@@ -30,8 +30,11 @@ For demonstration purposes, the login details are **exposed on the page**:
 
 ## 📂 Project Structure
 secure-review-ghpages/
+
 ├── index.html # Main page with login form & descriptions
+
 ├── style.css # Responsive design (works on laptop & mobile)
+
 └── app.js # Combined insecure & secure login logic
 
 ---
